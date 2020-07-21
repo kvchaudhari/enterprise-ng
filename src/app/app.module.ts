@@ -1,8 +1,6 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {
-  CommonModule
-} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,9 +14,13 @@ import { SohoComponentsModule } from 'ids-enterprise-ng';
 import { AboutDemoComponent } from './about/about.demo';
 import { AlertDemoComponent } from './alert/alert.demo';
 import { ApplicationMenuDemoComponent } from './application-menu/application-menu.demo';
+import { ApplicationMenuDynamicMenuDemoComponent } from './application-menu/application-menu-dynamic-menu.demo';
 import { ApplicationMenuLazyDemoComponent } from './application-menu/application-menu-lazy.demo';
 import { ApplicationMenuLazyMenuDemoComponent } from './application-menu/application-menu-lazy-menu.demo';
 import { ApplicationMenuLazyService } from './application-menu/application-menu-lazy-service.demo';
+import { ApplicationMenuDynamicDemoComponent } from './application-menu/application-menu-dynamic.demo';
+import { ApplicationMenuTestPerfDemoComponent } from './application-menu/application-menu-test-performance.demo';
+import { ApplicationMenuRoleSwitcherDemoComponent } from './application-menu/application-menu-roleswitcher.demo';
 import { AreaDemoComponent } from './area/area.demo';
 import { AutocompleteDemoComponent } from './autocomplete/autocomplete.demo';
 import { BarDemoComponent } from './bar/bar.demo';
@@ -35,6 +37,7 @@ import { BulletDemoComponent } from './bullet/bullet.demo';
 import { BusyIndicatorDemoComponent } from './busyindicator/form.demo';
 import { BusyIndicatorDemoBodyComponent } from './busyindicator/body-sample.demo';
 import { ButtonDemoComponent } from './button/button.demo';
+import { ButtonsetDemoComponent } from './buttonset/buttonset.demo';
 import { CalendarDemoComponent } from './calendar/calendar.demo';
 import { CalendarLegendDemoComponent } from './calendar/calendar-legend.demo';
 import { CalendarUpdatedDemoComponent } from './calendar/calendar-updated.demo';
@@ -107,8 +110,9 @@ import { DataGridToolbarDemoComponent } from './datagrid/datagrid-toolbar.demo';
 import { DataGridTreeGridDemoComponent } from './datagrid/datagrid-treegrid.demo';
 import { DataGridTreeGridLazyDemoComponent } from './datagrid/datagrid-treegrid-lazy.demo';
 import { DatagridTreegridDynamicfilteringDemoComponent } from './datagrid/datagrid-treegrid-dynamicfiltering.demo';
-import { ExpandedDemoComponent, DataGridExpandableRowDynamicDemoComponent } from './datagrid/datagrid-expandable-row-dynamic.demo';
-import { NestedDatagridDemoComponent, DataGridExpandableRowNestedDemoComponent } from './datagrid/datagrid-expandable-row-nested.demo';
+import { DataGridExpandableRowDynamicDemoComponent, ExpandedDemoComponent } from './datagrid/datagrid-expandable-row-dynamic.demo';
+import { DataGridExpandableRowNestedDemoComponent, NestedDatagridDemoComponent } from './datagrid/datagrid-expandable-row-nested.demo';
+import { DataGridTreeGridCubeDemoComponent } from './datagrid/datagrid-treegrid-cube.demo';
 import { DataGridSummaryRowDemoComponent } from './datagrid/datagrid-summary-row.demo';
 import { DatepickerDemoComponent } from './datepicker/datepicker.demo';
 import { DonutDemoComponent } from './donut/donut.demo';
@@ -145,12 +149,12 @@ import { HomePageScenarioADemoComponent } from './homepage/homepage-scenario-a.d
 import { HomePageScenarioBDemoComponent } from './homepage/homepage-scenario-b.demo';
 import { HomePageScenarioCDemoComponent } from './homepage/homepage-scenario-c.demo';
 import { HyperlinkDemoComponent } from './hyperlink/hyperlink.demo';
-import { SohoHeaderDemoComponent } from './header/header.demo';
 import { IconDemoComponent } from './icon/icon.demo';
 import { LabelDemoComponent } from './label/label.demo';
 import { LineDemoComponent } from './line/line.demo';
 import { ListViewDemoComponent } from './listview/listview.demo';
 import { ListViewCustomContentDemoComponent } from './listview/listview.custom-content.demo';
+import { LocaleInitializerModule } from './locale-initializer/locale-initializer.module';
 import { LookupDemoComponent } from './lookup/lookup.demo';
 import { LookupValidationDemoComponent } from './lookup/lookup-validation.demo';
 import { MaskDemoComponent } from './mask/mask.demo';
@@ -171,6 +175,7 @@ import { RatingDemoComponent } from './rating/rating.demo';
 import { SearchFieldDemoComponent } from './searchfield/searchfield.demo';
 import { SearchFieldClearDemoComponent } from './searchfield/searchfield-clear.demo';
 import { SliderDemoComponent } from './slider/slider.demo';
+import { SohoHeaderDemoComponent } from './header/header.demo';
 import { SohoHeaderDynamicDemoComponent } from './header/header-dynamic.demo';
 import { SohoMastheadDemoComponent } from './masthead/masthead.demo';
 import { SohoRenderLoopService } from '../../projects/ids-enterprise-ng/src/lib/renderLoop';
@@ -223,6 +228,7 @@ import { TreeSourceDemoComponent } from './tree/tree-source.demo';
 import { ValidationFormDemoComponent } from './validation/validation-form.demo';
 import { ValidationFormEventDemoComponent } from './validation/validation-form-event.demo';
 import { ValidationFormGroupDemoComponent } from './validation/validation-form-group.demo';
+import { WeekViewDemoComponent } from './week-view/week-view.demo';
 import { WizardDemoBackupRulePageComponent } from './wizard/wizard-backup-rule-page.demo';
 import { WizardDemoComponent } from './wizard/wizard.demo';
 import { WizardDemoConfirmationPageComponent } from './wizard/wizard-confirmation-page.demo';
@@ -230,12 +236,6 @@ import { WizardDemoResultPageComponent } from './wizard/wizard-result-page.demo'
 import { WizardDemoSelectFilePageComponent } from './wizard/wizard-selected-files-page.demo';
 import { WizardDemoTargetFolderPageComponent } from './wizard/wizard-target-folder-page.demo';
 import { WizardDemoValidationRulesPageComponent } from './wizard/wizard-validation-rules-page.demo';
-import { LocaleInitializerModule } from './locale-initializer/locale-initializer.module';
-import { ApplicationMenuRoleSwitcherDemoComponent } from './application-menu/application-menu-roleswitcher.demo';
-import { ApplicationMenuTestPerfDemoComponent } from './application-menu/application-menu-test-performance.demo';
-import { DataGridTreeGridCubeDemoComponent } from './datagrid/datagrid-treegrid-cube.demo';
-import { WeekViewDemoComponent } from './week-view/week-view.demo';
-import { ButtonsetDemoComponent } from './buttonset/buttonset.demo';
 
 @NgModule({
   declarations: [
@@ -243,8 +243,10 @@ import { ButtonsetDemoComponent } from './buttonset/buttonset.demo';
     AboutDemoComponent,
     AlertDemoComponent,
     ApplicationMenuDemoComponent,
+    ApplicationMenuDynamicMenuDemoComponent,
     ApplicationMenuLazyDemoComponent,
     ApplicationMenuLazyMenuDemoComponent,
+    ApplicationMenuDynamicDemoComponent,
     ApplicationMenuRoleSwitcherDemoComponent,
     ApplicationMenuTestPerfDemoComponent,
     AreaDemoComponent,

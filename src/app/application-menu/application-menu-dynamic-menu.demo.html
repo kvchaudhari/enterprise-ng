@@ -1,0 +1,16 @@
+<ng-template ngFor let-item [ngForOf]="menuSpec">
+  <div class="accordion-header">
+    <button class="btn" type="button">
+      <span class="icon plus-minus" aria-hidden="true" role="presentation"></span>
+      <span class="audible">Expand</span>
+    </button>
+    <a id="{{item?.name}}" href="javascript:void(0);">
+      <span>{{item.name}}</span>
+    </a>
+  </div>
+  <app-application-menu-dynamic-menu
+    *ngIf="item.menu && item.expanded"
+    [menuSpec]="item.menu"
+    class="accordion-pane">
+  </app-application-menu-dynamic-menu>
+</ng-template>

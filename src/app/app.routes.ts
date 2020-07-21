@@ -187,6 +187,7 @@ import { WeekViewDemoComponent } from './week-view/week-view.demo';
 import { DataGridExpandableRowNestedDemoComponent } from './datagrid/datagrid-expandable-row-nested.demo';
 import { DataGridExpandableRowDynamicDemoComponent } from './datagrid/datagrid-expandable-row-dynamic.demo';
 import { DataGridSummaryRowDemoComponent } from './datagrid/datagrid-summary-row.demo';
+import { ApplicationMenuDynamicDemoComponent } from './application-menu/application-menu-dynamic.demo';
 
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' }, // default
@@ -194,6 +195,7 @@ export const routes: Routes = [
   { path: 'accordion', loadChildren: () => import('./accordion/accordion-demo.module').then(m => m.AccordionDemoModule) },
   { path: 'alert', component: AlertDemoComponent },
   { path: 'application-lazy-menu', component: ApplicationMenuLazyDemoComponent },
+  { path: 'application-dynamic-menu', component: ApplicationMenuDynamicDemoComponent },
   { path: 'application-menu-roleswitcher', component: ApplicationMenuRoleSwitcherDemoComponent },
   { path: 'application-menu-test-performance', component: ApplicationMenuTestPerfDemoComponent },
   { path: 'area', component: AreaDemoComponent },
