@@ -1,0 +1,43 @@
+<div class="example-section">
+  <form>
+    <div class="row">
+      <h1>Multi-Select Dropdown Landmark example</h1>
+      <span class="code-tag">Live Example</span>
+
+      <div class="row">
+<!--        <div class="four columns">-->
+<!--          <div class="field">-->
+<!--            <label for="states-multi-source-alpha" class="label">Using alpha source & tooltip</label>-->
+<!--            <select soho-dropdown id="states-multi-source-alpha" multiple [source]="sourceAlpha" [showSearchUnderSelected]="true" [reload]="'typeahead'"-->
+<!--                    soho-tooltip content="{{stateAsText}}" [(ngModel)]="model" name="landmark-multiselect">-->
+<!--              <option *ngFor="let option of model.options" selected="{{option.selected}}" [value]="option.value">{{option.label}}</option>-->
+<!--            </select>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="four columns">
+          <div class="field">
+            <label for="states-multi-source-alpha" class="label">Using alpha source & tooltip</label>
+            <select soho-dropdown name="states-multi-source-alpha" id="states-multi-source-alpha" multiple [source]="sourceAlpha" [showSearchUnderSelected]="true" [reload]="'typeahead'" [moveSelected]="'all'"
+                    soho-tooltip content="{{stateAsText}}" [(ngModel)]="model.value">
+              <option *ngFor="let option of model.options" selected="{{option.selected}}" [value]="option.value">{{option.label}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="four columns">
+          <div class="field">
+            <label for="states-multi-source-alpha-ro" class="label">Readonly using alpha source & tooltip</label>
+            <select soho-dropdown name="states-multi-source-alpha-ro" id="states-multi-source-alpha-ro" readOnly multiple [source]="sourceAlpha"
+                    soho-tooltip content="{{stateAsText}}" [(ngModel)]="model.value">
+              <option *ngFor="let option of model.options" selected="{{option.selected}}" [value]="option.value">{{option.label}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <button soho-button (click)="toggleModel()">{{showModel ? 'Hide' : 'Show'}} Model</button>
+  <div *ngIf="showModel">
+    <hr>
+    <h3>{{ model | json }}</h3>
+  </div>
+</div>
