@@ -47,17 +47,13 @@ export class SohoModalDialogService {
    * The dialog won't necessarily be open yet, see the dialog ref api for further methods.
    *
    * @param component - the type of the component to instantiate; must not be null.
-   * @param parent - the parent container; obsolete and will be removed in a later release.
+   * @param parent - the parent container; obsolete but parameter kept for backwards API compatibility. Has no effect.
    * @param options - the control options to use.
    *
    * @return the modal dialog reference.
    */
-  public modal<T>(component: ComponentType<T>, parent?: ViewContainerRef, options?: SohoModalOptions): SohoModalDialogRef<T> {
+  public modal<T>(component: ComponentType<T>, _parent?: ViewContainerRef, options?: SohoModalOptions): SohoModalDialogRef<T> {
     ArgumentHelper.checkNotNull('component', component);
-
-    if (parent) {
-      console.warn(`The 'parent' parameter is deprecated, and will be removed in a future release.`);
-    }
 
     options = options || {};
 
