@@ -1,4 +1,4 @@
-﻿import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
   CommonModule
@@ -89,7 +89,7 @@ import { DataGridDynamicDemoComponent } from './datagrid/datagrid-dynamic.demo';
 import { DataGridEditorsDemoComponent } from './datagrid/datagrid-editors.demo';
 import { DataGridEmptyMessageDemoComponent } from './datagrid/datagrid-empty-message.demo';
 import { DataGridExportWithoutDataGridDemoComponent } from './datagrid/datagrid-export-without-datagrid.demo';
-import { DataGridFixedHeaderDemoComponent } from './datagrid/datagrid-fixedheader.demo';
+import { CommonPopupComponent, DataGridFixedHeaderDemoComponent } from './datagrid/datagrid-fixedheader.demo';
 import { DataGridGroupableDemoComponent } from './datagrid/datagrid-groupable.demo';
 import { DataGridGroupedHeaderDemoComponent } from './datagrid/datagrid-grouped-header.demo';
 import { DataGridMixedSelectionDemoComponent } from './datagrid/datagrid-mixed-selection.demo';
@@ -251,6 +251,7 @@ import { ButtonsetDemoComponent } from './buttonset/buttonset.demo';
     ApplicationMenuRoleSwitcherDemoComponent,
     ApplicationMenuTestPerfDemoComponent,
     AreaDemoComponent,
+    CommonPopupComponent,
     AutocompleteDemoComponent,
     BarDemoComponent,
     BarGroupedDemoComponent,
@@ -473,6 +474,7 @@ import { ButtonsetDemoComponent } from './buttonset/buttonset.demo';
   ],
   entryComponents: [
     ExpandedDemoComponent,
+    CommonPopupComponent,
     NestedDatagridDemoComponent,
     DemoCellDatePickerEditorComponent,
     DemoCellInputEditorComponent,
