@@ -11,6 +11,20 @@
     </soho-toolbar-button-set>
   </soho-toolbar>
 
-  <div soho-datagrid *ngIf="gridOptions" [gridOptions]="gridOptions" (selected)="onSelected($event)"></div>
+  <div #fixheaderGrid soho-datagrid *ngIf="gridOptions" [gridOptions]="gridOptions"></div>
 
+
+  <button class="btn-primary hide-focus" type="submit" (click)="showPopupGrid()">Show Popup Grid</button>
+  <button style="display: none;" id="showValueBtn" class="btn-primary hide-focus" type="submit" (click)="showSelectedValues()">Show Data</button>
+
+  <div *ngIf = "dataToShow && dataToShow.length > 0">
+    <h3>
+      Selected values:
+    </h3>
+    <ul>
+      <li *ngFor="let value of dataToShow">{{value.productId}}</li>
+    </ul>
+  </div>
+
+  <div #dialogPlaceholder></div>
 </div>
